@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cloudcomputingcrud-dev-222751-authRole",
+      "UnauthRoleArn": "arn:aws:iam::196143331329:role/amplify-cloudcomputingcrud-dev-222751-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::196143331329:role/amplify-cloudcomputingcrud-dev-222751-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-cloudcomputingcrud-dev-222751-deployment",
+      "UnauthRoleName": "amplify-cloudcomputingcrud-dev-222751-unauthRole",
+      "StackName": "amplify-cloudcomputingcrud-dev-222751",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:196143331329:stack/amplify-cloudcomputingcrud-dev-222751/928e7d80-629e-11ed-9547-0a931f449584",
+      "AmplifyAppId": "dtpcdzw76hmgf",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-cloudcomputingcrud-dev-222751-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "cloudcomputingcrud0d292709": {}
+      },
+      "function": {
+        "handleNotes": {
+          "deploymentBucketName": "amplify-cloudcomputingcrud-dev-222751-deployment",
+          "s3Key": "amplify-builds/handleNotes-454959733146665a622f-build.zip"
+        }
+      },
+      "storage": {
+        "notesDB": {}
+      },
+      "api": {
+        "notesapi": {}
+      }
+    }
+  }
+}
