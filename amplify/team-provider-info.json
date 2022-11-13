@@ -15,18 +15,6 @@
     "categories": {
       "auth": {
         "cloudcomputingcrud0d292709": {}
-      },
-      "function": {
-        "handleNotes": {
-          "deploymentBucketName": "amplify-cloudcomputingcrud-dev-222751-deployment",
-          "s3Key": "amplify-builds/handleNotes-454959733146665a622f-build.zip"
-        }
-      },
-      "storage": {
-        "notesDB": {}
-      },
-      "api": {
-        "notesapi": {}
       }
     }
   }

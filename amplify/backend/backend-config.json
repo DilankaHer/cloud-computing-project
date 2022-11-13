@@ -25,47 +25,7 @@
       }
     }
   },
-  "storage": {
-    "notesDB": {
-      "service": "DynamoDB",
-      "providerPlugin": "awscloudformation"
-    }
-  },
-  "function": {
-    "handleNotes": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda",
-      "dependsOn": [
-        {
-          "category": "storage",
-          "resourceName": "notesDB",
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "attributeEnvMap": {
-            "Name": "TABLE_NAME",
-            "Arn": "TABLE_ARN"
-          }
-        }
-      ]
-    }
-  },
-  "api": {
-    "notesapi": {
-      "service": "API Gateway",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "handleNotes",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
-        }
-      ]
-    }
-  }
+  "storage": {},
+  "function": {},
+  "api": {}
 }
