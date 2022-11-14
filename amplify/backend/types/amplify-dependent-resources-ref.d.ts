@@ -9,5 +9,36 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientIDWeb": "string",
             "AppClientID": "string"
         }
+    },
+    "storage": {
+        "notesDB": {
+            "Name": "string",
+            "Arn": "string",
+            "StreamArn": "string",
+            "PartitionKeyName": "string",
+            "PartitionKeyType": "string",
+            "SortKeyName": "string",
+            "SortKeyType": "string",
+            "Region": "string"
+        },
+        "notesImageStore": {
+            "BucketName": "string",
+            "Region": "string"
+        }
+    },
+    "function": {
+        "handleNotes": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        }
+    },
+    "api": {
+        "notesapi": {
+            "RootUrl": "string",
+            "ApiName": "string",
+            "ApiId": "string"
+        }
     }
 }

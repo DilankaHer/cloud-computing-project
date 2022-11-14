@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 
-const AddNote = ({ handleAddNote }) => {
-  console.log("innnnnnnnnnnnnnnnAddddd");
-  const [noteText, setNoteText] = useState("");
+const EditNote = ({ note, handleUpdateNote }) => {
+  console.log("innnnnnnnnnnnnnnn");
+  const [noteText, setNoteText] = useState(note.text);
   const [fileInfo, setFileInfo] = useState();
-  const [imageURL, setImageURL] = useState();
+  const [imageURL, setImageURL] = useState(note.image ? note.image : "");
   const characterLimit = 200;
 
   const handleChange = (event) => {
@@ -18,7 +18,7 @@ const AddNote = ({ handleAddNote }) => {
 
   const handleSaveClick = () => {
     if (noteText.trim().length > 0) {
-      handleAddNote(noteText, fileInfo);
+      handleUpdateNote(note, noteText, fileInfo);
       setNoteText("");
       setImageURL();
       setFileInfo();
@@ -65,4 +65,4 @@ const AddNote = ({ handleAddNote }) => {
   );
 };
 
-export default AddNote;
+export default EditNote;

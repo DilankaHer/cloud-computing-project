@@ -48,10 +48,10 @@ code {
 	background-color: #67d7cc;
 }
 
-textarea {
-	border: none;
-	resize: none;
-	background-color: #67d7cc;
+.textarea {
+  /* height:auto; */
+  border:none;
+  background-color: #67d7cc;
 }
 
 textarea:focus {
@@ -91,6 +91,26 @@ textarea:focus {
 	cursor: pointer;
 }
 
+.delete-icon:hover {
+  transform: scale(1.2);
+}
+
+.add-image {
+	cursor: pointer;
+}
+
+.add-image:hover {
+  transform: scale(1.2);
+}
+
+.edit-icon {
+	cursor: pointer;
+}
+
+.edit-icon:hover {
+	transform: scale(1.2);
+}
+
 .search {
 	display: flex;
 	align-items: center;
@@ -108,4 +128,10 @@ textarea:focus {
 
 .search input:focus {
 	outline: none;
+}
+
+.resize_fit_center {
+  max-width:80%;
+  max-height:80%;
+  vertical-align: middle;
 }

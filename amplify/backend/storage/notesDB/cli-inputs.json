@@ -1,0 +1,14 @@
+{
+  "resourceName": "notesDB",
+  "tableName": "Notes",
+  "partitionKey": {
+    "fieldName": "user",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "noteId",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
