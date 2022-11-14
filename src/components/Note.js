@@ -9,7 +9,6 @@ const Note = ({
   file,
   imageURL,
 }) => {
-  console.log("IUnnnnOteeee");
   return (
     <div className="note">
       <span>{text}</span>

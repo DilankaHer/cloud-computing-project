@@ -5,28 +5,25 @@ import { Fragment } from "react";
 
 const NotesList = ({
   notes,
+  notesFiltered,
   handleAddNote,
   handleDeleteNote,
   handleEditNote,
   handleUpdateNote,
 }) => {
-  console.log("jioehidfed", notes);
-
   const handleEditNoteChange = (noteId) => {
-    let newNotes = notes;
-    for (var i = 0; i < notes.length; i++) {
-      if (notes[i].noteId == noteId) {
-        newNotes[i].mode = "edit";
-        break;
+    let newNotes = notes.map((note) => {
+      if (note.noteId == noteId) {
+        note.mode = "edit";
       }
-    }
+      return note;
+    });
     handleEditNote(newNotes);
-    console.log("dhiushdu", notes);
   };
 
   return (
     <div className="notes-list">
-      {notes.map((note) => (
+      {notesFiltered.map((note) => (
         <Fragment key={note.noteId}>
           {note.mode != "edit" ? (
             <Note

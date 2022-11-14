@@ -179,6 +179,8 @@ app.post(path, function (req, res) {
       req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
 
+  delete req.body.image;
+
   let putItemParams = {
     TableName: tableName,
     Item: req.body,

@@ -2,12 +2,12 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
+import { MdDelete } from "react-icons/md";
 
 const AddNote = ({ handleAddNote }) => {
-  console.log("innnnnnnnnnnnnnnnAddddd");
   const [noteText, setNoteText] = useState("");
   const [fileInfo, setFileInfo] = useState();
-  const [imageURL, setImageURL] = useState();
+  const [imageURL, setImageURL] = useState("");
   const characterLimit = 200;
 
   const handleChange = (event) => {
@@ -20,7 +20,7 @@ const AddNote = ({ handleAddNote }) => {
     if (noteText.trim().length > 0) {
       handleAddNote(noteText, fileInfo);
       setNoteText("");
-      setImageURL();
+      setImageURL("");
       setFileInfo();
     }
   };
@@ -28,6 +28,11 @@ const AddNote = ({ handleAddNote }) => {
   const handleChangeImage = (e) => {
     setFileInfo(e);
     setImageURL(URL.createObjectURL(e.target.files[0]));
+  };
+
+  const handleDeleteImage = () => {
+    setFileInfo();
+    setImageURL("");
   };
 
   return (
@@ -41,6 +46,16 @@ const AddNote = ({ handleAddNote }) => {
       />
       <div style={{ textAlign: "center", marginTop: "20px" }}>
         <img className="resize_fit_center" src={imageURL} />
+        {imageURL != "" ? (
+          <MdDelete
+            style={{ marginLeft: "10px", verticalAlign: "top" }}
+            onClick={() => handleDeleteImage()}
+            className="delete-icon"
+            size="1.3em"
+          />
+        ) : (
+          ""
+        )}
       </div>
       <div className="note-footer">
         <small>{characterLimit - noteText.length} Remaining</small>
@@ -55,6 +70,7 @@ const AddNote = ({ handleAddNote }) => {
             id={`img`}
             style={{ display: "none", visibility: "hidden" }}
             onChange={(e) => handleChangeImage(e)}
+            onClick={(e) => (e.target.value = null)}
           />
         </div>
         <button className="save" onClick={handleSaveClick}>

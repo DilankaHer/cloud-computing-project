@@ -111,6 +111,24 @@ textarea:focus {
 	transform: scale(1.2);
 }
 
+.close-icon {
+	cursor: pointer;
+	color: red;
+}
+
+.close-icon:hover {
+	transform: scale(1.2);
+}
+
+.check-icon {
+	cursor: pointer;
+	color: green;
+}
+
+.check-icon:hover {
+	transform: scale(1.2);
+}
+
 .search {
 	display: flex;
 	align-items: center;
