@@ -23,7 +23,7 @@
       "function": {
         "handleNotes": {
           "deploymentBucketName": "amplify-cloudcomputingcrud-dev-222751-deployment",
-          "s3Key": "amplify-builds/handleNotes-675974372b6241724e49-build.zip"
+          "s3Key": "amplify-builds/handleNotes-5a4164385a426f336c39-build.zip"
         }
       },
       "api": {

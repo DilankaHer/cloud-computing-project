@@ -246,6 +246,10 @@ app.listen(3000, function () {
   console.log("App started");
 });
 
+/**************************************
+ * HTTP post method to update an object  *
+ ***************************************/
+
 app.post(path + "/update" + hashKeyPath + sortKeyPath, function (req, res) {
   let expr = "set ";
   let exprValues = {};
